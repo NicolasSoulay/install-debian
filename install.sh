@@ -5,13 +5,13 @@ sudo apt update
 sudo apt upgrade
 
 #logiciels
-sudo apt install thunderbird steam libreoffice 
+sudo apt install thunderbird steam libreoffice firefox-esr
 
 #package de base pour l'environnement de bureau
 sudo apt install kitty picom lightdm nitrogen awesome rofi numlockx exa neofetch
 
 #utilitaire
-sudo apt install git wget pulseaudio pavucontrol gh fd-find ninja-build gettext cmake unzip curl ripgrep clang xsel composer
+sudo apt install wget pulseaudio pavucontrol gh fd-find ninja-build gettext cmake unzip curl ripgrep clang xsel composer
 
 #language scpecific
 sudo apt install python3 python3-pip python3-venv gcc g++ php php-mysql php-curl php-common libapache2-mod-php php-cli
@@ -42,6 +42,9 @@ mkdir Dev
 #on ajoute des lignes au .bashrc
 echo 'shopt -s globstar' >> .bashrc
 echo 'export PATH="$HOME/Scripts:$PATH"' >> .bashrc
+
+#ajout des bash alias
+mv ~/install-debian/.bash_aliases ~/.bash_aliases
 
 #tous les fichier de config + les wallpapers
 git clone https://github.com/NicolasSoulay/Scripts.git
@@ -98,3 +101,4 @@ sudo apt install jdk.deb
 sudo apt update
 sudo apt upgrade
 sudo apt autoremove
+
