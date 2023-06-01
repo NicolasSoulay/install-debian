@@ -5,7 +5,7 @@ sudo apt update
 sudo apt upgrade
 
 #logiciels
-sudo apt install thunderbird steam libreoffice firefox-esr
+sudo apt install thunderbird libreoffice firefox-esr
 
 #package de base pour l'environnement de bureau
 sudo apt install kitty picom lightdm nitrogen awesome rofi numlockx exa neofetch
@@ -20,7 +20,7 @@ sudo apt install python3 python3-pip python3-venv gcc g++ php php-mysql php-curl
 gh auth login
 
 #install et configuration de git credential manager
-wget "https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.1.2/gcm-linux_amd64.2.1.2.deb" -0 gcm.deb
+wget "https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.1.2/gcm-linux_amd64.2.1.2.deb" -O gcm.deb
 sudo dpkg -i gcm.deb
 git config --global credential.credentialStore plaintext
 git-credential-manager configure
@@ -58,6 +58,7 @@ cd ~
 
 #on recupere les fonts sur github et on met a jour le cache
 sudo rm -R ~/.local/share/fonts
+mkdir ~/.local/share
 cd ~/.local/share
 git clone https://github.com/NicolasSoulay/fonts.git
 cd ~
@@ -79,7 +80,7 @@ git checkout release-0.9
 make CMAKE_BUILD_TYPE=Release
 sudo make install
 cd ..
-rm -R neovim
+sudo rm -R neovim
 
 #install de symfony
 curl -1sLf 'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | sudo -E bash
@@ -94,10 +95,13 @@ nvm install-latest-npm
 npm install -g @angular/cli
 
 #install de java
-wget "https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb" -0 jdk.deb
+wget "https://download.oracle.com/java/20/latest/jdk-20_linux-x64_bin.deb" -O jdk.deb
 sudo apt install jdk.deb
 
-#update final au cas ou, et remove des dependances obsoletes
+#update final au cas ou, on remove des dependances obsoletes, on remove les fichier qui ne servent plus
+sudo rm discord.deb
+sudo rm gcm.deb
+sudo rm jdk.deb
 sudo apt update
 sudo apt upgrade
 sudo apt autoremove
