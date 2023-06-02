@@ -16,7 +16,7 @@ sudo apt install kitty picom lightdm nitrogen awesome rofi numlockx exa neofetch
 sudo apt install wget pulseaudio pavucontrol gh fd-find ninja-build gettext cmake unzip curl ripgrep clang xsel composer
 
 #language scpecific
-sudo apt install gcc g++ php php-mysql php-curl php-common libapache2-mod-php php-cli php-xml mariadb-server mariadb-client
+sudo apt install gcc g++ python3 python3-pip python3-venv php php-mysql php-curl php-common libapache2-mod-php php-cli php-xml mariadb-server mariadb-client
 
 #install et configuration de git credential manager
 wget "https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.1.2/gcm-linux_amd64.2.1.2.deb" -O gcm.deb
