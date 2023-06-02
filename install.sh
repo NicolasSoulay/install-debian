@@ -5,7 +5,7 @@ sudo apt update
 sudo apt upgrade
 
 #logiciels
-sudo apt install thunderbird libreoffice firefox-esr
+sudo apt install thunderbird libreoffice firefox steam
 
 #package de base pour l'environnement de bureau
 sudo apt install kitty picom lightdm nitrogen awesome rofi numlockx exa neofetch
@@ -15,9 +15,6 @@ sudo apt install wget pulseaudio pavucontrol gh fd-find ninja-build gettext cmak
 
 #language scpecific
 sudo apt install python3 python3-pip python3-venv gcc g++ php php-mysql php-curl php-common libapache2-mod-php php-cli
-
-#authentification Github
-gh auth login
 
 #install et configuration de git credential manager
 wget "https://github.com/git-ecosystem/git-credential-manager/releases/download/v2.1.2/gcm-linux_amd64.2.1.2.deb" -O gcm.deb
