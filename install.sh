@@ -91,7 +91,7 @@ sudo apt install symfony-cli
 
 #install de NodeJs et NPM
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
-nvm install node
+nvm install node # TODO il faut que je reload le terminal ou le shell à ce point la, sinon il connais pas encore la commande nvm, ou alors faut que je lui donne le chemin vers la commande
 nvm install-latest-npm
 
 #install de Angular CLI 
